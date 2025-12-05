@@ -1,0 +1,92 @@
+import React from "react";
+
+export default function Portfolio(): JSX.Element {
+  const year = new Date().getFullYear();
+
+  return (
+    <div>
+      <style>{`
+        :root{--bg:#0f172a;--card:#1e293b;--accent:#38bdf8;--muted:#94a3b8;--text:#fff}
+        *{box-sizing:border-box}
+        body,html,#root{margin:0;padding:0;font-family:Inter, Poppins, system-ui, -apple-system, sans-serif}
+        .page{background:var(--bg);color:var(--text);min-height:100vh}
+        header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--card);box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+        header h1{font-size:26px;margin:0}
+        .container{max-width:1000px;margin:40px auto;padding:0 20px}
+        section{margin-bottom:48px}
+        h2{font-size:20px;margin:0 0 12px;border-left:4px solid var(--accent);padding-left:10px}
+        p{font-size:16px;line-height:1.6;margin:0}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+        .card{background:var(--card);border-radius:10px;padding:16px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+        .contact{text-align:center}
+        .socials{margin-top:10px}
+        .socials a{margin:0 8px;color:var(--accent);text-decoration:none}
+        footer{background:var(--card);color:var(--muted);padding:14px;text-align:center}
+        @media (max-width:600px){header{padding:14px 18px}.container{margin:20px auto}}
+      `}</style>
+
+      <div className="page">
+        <header>
+          <h1>Ajit Chingale</h1>
+        </header>
+
+        <main className="container">
+          <section id="about">
+            <h2>About Me</h2>
+            <p>
+              I’m <strong>Ajit Chingale</strong>, a passionate <strong>Data Analyst &amp; Power BI Developer</strong> from Karnataka 🇮🇳. I’m currently pursuing my <strong>BCA</strong> and a professional course in <strong>Data Science</strong> at Besant Technologies. My goal is to master <strong>AI/ML</strong> and build my own startup while achieving a 10 LPA career milestone within 2 years.
+            </p>
+          </section>
+
+          <section id="skills">
+            <h2>Skills</h2>
+            <div className="grid">
+              <div className="card">Power BI</div>
+              <div className="card">Python</div>
+              <div className="card">SQL</div>
+              <div className="card">Excel</div>
+              <div className="card">Machine Learning</div>
+              <div className="card">Data Visualization</div>
+              <div className="card">Web Development</div>
+              <div className="card">AI Model Building</div>
+            </div>
+          </section>
+
+          <section id="projects">
+            <h2>Projects</h2>
+            <div className="grid">
+              <div className="card">
+                <h3>Sales Dashboard (Power BI)</h3>
+                <p>Interactive dashboard analyzing company-wide sales trends with KPIs and region-wise insights.</p>
+              </div>
+
+              <div className="card">
+                <h3>Python Web Scraper</h3>
+                <p>Automated tool for collecting and visualizing data from e-commerce websites.</p>
+              </div>
+
+              <div className="card">
+                <h3>AI Chatbot (In Progress)</h3>
+                <p>Building a custom AI agent from scratch without relying on external APIs like ChatGPT.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <div className="contact">
+              <p>📞 <a href="tel:+919611417179">+91 9611417179</a></p>
+              <div className="socials">
+                <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="mailto:example@gmail.com">Email</a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer>© {year} Ajit Chingale | Built with ❤️ using React</footer>
+      </div>
+    </div>
+  );
+}
